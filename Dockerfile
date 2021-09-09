@@ -12,7 +12,7 @@ RUN apt-get install -y software-properties-common
 RUN ln -sf /usr/share/zoneinfo/Europe/Zurich /etc/localtime && dpkg-reconfigure -f noninteractive tzdata
 RUN LC_ALL=C.UTF-8 add-apt-repository -y  ppa:ondrej/php
 RUN apt-get update -yqq
-RUN apt-get install -y php8.0 php8.0-cli php8.0-mbstring php8.0-zip php8.0-mysql php8.0-opcache php8.0-json php8.0-curl php8.0-ldap php8.0-intl php8.0-common php8.0-gd php8.0.soap php8.0-xml php8.0-sqlite3
+RUN apt-get install -y php8.0 php8.0-cli php8.0-mbstring php8.0-zip php8.0-mysql php8.0-opcache php8.0-curl php8.0-ldap php8.0-intl php8.0-common php8.0-gd php8.0.soap php8.0-xml php8.0-sqlite3
 RUN echo 'memory_limit=1G'> /etc/php/8.0/cli/conf.d/php-memory_limit.ini
 RUN curl -sL https://deb.nodesource.com/setup_lts.x| bash - && apt-get install nodejs -y
 
